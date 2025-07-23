@@ -2,6 +2,10 @@
 	"files.associations": {
 		"minitalk.h": "c",
 		"signal.h": "c",
-		"ft_printf.h": "c"
+		"ft_printf.h": "c",
+		"stdarg.h": "c",
+		"limits.h": "c",
+		"libft.h": "c",
+		"types.h": "c"
 	}
 }
