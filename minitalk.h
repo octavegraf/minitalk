@@ -6,25 +6,26 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:57:12 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/23 16:51:50 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/24 14:32:54 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
 
-# include "ft_printf/ft_printf.h"
 # include <signal.h>
-# include <sys/types.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include "ft_printf/ft_printf.h"
 
-# define BUFFER 1024
+# define BUFFER 131072
 # define DELAY 100
 
 typedef struct s_msg
 {
-	int		bit;
-	int		buff_len;
 	char	buffer[BUFFER];
-}			t_msg;
+	int		len;
+	int		bit;
+}	t_msg;
 
 #endif
