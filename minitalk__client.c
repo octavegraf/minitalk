@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:25:04 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/25 13:54:04 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/25 14:56:14 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int argc, char **argv)
 	while (argv[2][i])
 	{
 		if (send_str(pid, argv[2][i]) == -1)
-			return (ft_putstr("Server error."), 1);
+			return (ft_putstr("Server error.\n"), 1);
 		i++;
 	}
 	send_str(pid, '\0');
