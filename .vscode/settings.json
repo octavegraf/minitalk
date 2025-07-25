@@ -6,6 +6,7 @@
 		"stdarg.h": "c",
 		"limits.h": "c",
 		"libft.h": "c",
-		"types.h": "c"
+		"types.h": "c",
+		"unistd.h": "c"
 	}
 }
