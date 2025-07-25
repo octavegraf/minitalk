@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:57:12 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/25 13:14:15 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/25 14:16:55 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <signal.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "ft_printf/ft_printf.h"
+# include "libft/libft.h"
 
 # define BUFFER 1024
 # define DELAY 60
