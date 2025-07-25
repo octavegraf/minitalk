@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 13:57:12 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/24 14:32:54 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/25 13:14:15 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include "ft_printf/ft_printf.h"
 
-# define BUFFER 131072
-# define DELAY 100
+# define BUFFER 1024
+# define DELAY 60
 
 typedef struct s_msg
 {
