@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:25:04 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/25 14:56:14 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/25 15:10:36 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int	send_str(int pid, char c)
 	{
 		if ((c & (1 << (7 - bit))))
 		{
-			if (kill(pid, SIGUSR1) == -1)
+			if (kill(pid, SIGUSR1))
 				return (-1);
 		}
 		else
 		{
-			if (kill(pid, SIGUSR2) == -1)
+			if (kill(pid, SIGUSR2))
 				return (-1);
 		}
 		bit++;
