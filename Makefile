@@ -8,17 +8,19 @@ LIBFT_LIB		=	$(LIBFT_FOLDER)libft.a
 LIBS			=	$(LIBFT_LIB)
 OBJ				=	minitalk__$(SERVER).o minitalk__$(CLIENT).o 
 
-all				:	submodules client server
+all				:	$(CLIENT) $(SERVER)
 
 submodules		:
 	@git submodule update --init --recursive
 	@$(MAKE) -C $(LIBFT_FOLDER)
 
-client			:	minitalk__$(CLIENT).o
+$(CLIENT)		:	minitalk__$(CLIENT).o $(LIBS)
 	$(CC) minitalk__$(CLIENT).o $(LIBS) -o $(CLIENT)
 
-server			:	minitalk__$(SERVER).o
+$(SERVER)		:	minitalk__$(SERVER).o $(LIBS)
 	$(CC) minitalk__$(SERVER).o $(LIBS) -o $(SERVER)
+
+$(LIBS)			:	submodules
 
 %.o				:	%.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -33,4 +35,4 @@ fclean			:	clean
 re				:	fclean all
 
 
-.PHONY: all clean fclean re submodules client server
+.PHONY: all clean fclean re submodules
