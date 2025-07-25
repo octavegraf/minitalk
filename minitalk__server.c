@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:34:43 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/25 13:42:59 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/25 14:21:59 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,15 @@ void	sighandler(int sig)
 
 int	main(void)
 {
-	int	pid;
+	int		pid;
+	char	*pid_char;
 
 	pid = getpid();
-	ft_printf("%d\n", pid);
+	pid_char = ft_itoa(pid);
+	if (!pid_char)
+		return (1);
+	ft_putstr(pid_char);
+	free(pid_char);
 	signal(SIGUSR1, sighandler);
 	signal(SIGUSR2, sighandler);
 	while (1)
